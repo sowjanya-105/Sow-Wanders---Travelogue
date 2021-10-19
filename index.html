@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sow Wanders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+<a href="#" class="logo">Sow Wanders</a>
+<div class="toggle"></div>
+<ul class="navigation">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Destination</a></li>
+</ul>
+    </header>
+<section>
+    <h2 id="text"><span>Stories from my adventures around the</span><br />WORLD</h2>
+    <img src="bird1.png" id="bird1">
+    <img src="bird2.png" id="bird2">
+    <img src="forest.png" id="forest">
+
+    <a href="#" id="btn">Explore</a>
+    <img src="rocks.png" id="rocks">
+    <img src="water.png" id="water">
+</section>
+<div class="sec">
+    <h2>My Wanderlust Journey</h2>
+    <p>
+        I don't know how, when or from where did I catch a sudden impulse towards travel.
+        I'm not sure if I could make a career out of it, but I strongly see it as my passion
+        because it not just excites me, but I clearly do see the power that comes when I'm into it. 
+        I just can't explain that feel, that impulse. It is just beyond words. I haven't travelled much 
+        in the recent times, but there are a lot of places in my so called bucket list. I would definitely
+        explore more often,  travel to uncharted places and experience all the adventures. It will surely be 
+        on my priority list no matter what happens. But yes, I have to wait for it at least for a couple of years 
+        ahead to stand on my own feet in order to get out of my comfort zone and travel with no regrets. <br />
+        Though I have travelled a lot of places with my parents and grandma during my childhood, but I had never felt
+        this impulse before. I have now started to feel the beauty in every little thing around me, the trees, the clouds,
+        those little creatures and everything the God has given us in the form of nature.
+      </p>
+</div>
+<script>
+    const toggleMenu = document.querySelector('.toggle');
+    const navigation = document.querySelector('.navigation');
+    toggleMenu.onclick = function() {
+        toggleMenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let forest = document.getElementById('forest');
+    let water = document.getElementById('water');
+    let header = document.getElementById('header');
+
+    window.addEventListener('scroll',function(){
+        let value=window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + '%';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.left = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.top = value * -5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.25 + 'px';
+        header.style.top = value * 0.5 + 'px';
+
+    });
+</script>
+</body>
+</html>
